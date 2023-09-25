@@ -1,1 +1,0 @@
-# lucketyp.github.io
