@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 15vh;
+}
+
+model-viewer {
+    width: 50vw;
+    height: 80vh;
+    padding: 2vh;
+}

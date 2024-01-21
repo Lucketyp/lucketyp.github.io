@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>3D viewer demo</title>
     <script type="module" src="model-viewer.js"></script>
+    <script type="module" src="model-viewer-effects.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>Lucketyp</header>
+    <header><b>AF Marathon</b></header>
+    <p>Här är en massa exempeltext. En hel väldans massa. Bara för att man ska se att det finns text.
+       Här kommer lite mer text. Oj! Tro det eller ej ännu mer text. Lorem ipsum hah nej mer text igen.
+    </p>
     <model-viewer
     src="models\AF_MARATHON.glb" 
-    shadow-intensity="1" camera-controls touch-action="pan-y">
+    shadow-intensity="1.5" 
+    camera-controls touch-action="pan-y"
+    disable-zoom
+    pan-sensitivity="0.1f"
+    orbit-sensitivty="0.1f"
+    zoom-sensitivity="0.1f"
+    camera-orbit="40deg 0deg auto"
+    exposure="0.8"
+    >
     </model-viewer>
+    <p>Här kommer ännu mer exempeltext. En hel väldans massa. Bara för att man ska se att det finns text.
+        Här kommer lite mer text. Oj! Tro det eller ej ännu mer text. Lorem ipsum hah nej mer text igen.
+     </p>
 </body>
 </html>
