@@ -1,0 +1,20 @@
+/* Alternating pattern */
+
+
+
+.left { 
+    flex-direction: row-reverse;
+}
+    
+.right {
+    flex-direction: row;
+}
+
+.text {
+    margin: 0vh 5vw;
+
+}
+
+.text p {
+    width: 45vw;
+}
