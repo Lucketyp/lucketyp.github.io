@@ -3,32 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D viewer demo</title>
-    <script type="module" src="model-viewer.js"></script>
-    <script type="module" src="model-viewer-effects.js"></script>
+    <title>Company Time</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><b>AF Marathon</b></header>
-    <p>Här är en massa exempeltext. En hel väldans massa. Bara för att man ska se att det finns text.
-       Här kommer lite mer text. Oj! Tro det eller ej ännu mer text. Lorem ipsum hah nej mer text igen.
-    </p>
-    <model-viewer
-    src="models\Marathon_med_material.glb" 
-    tone-mapping="commerce"
-    environment-image="legacy"
-    shadow-intensity="1.5" 
+    <div class="container">
+        <div class="settings">
+            <div class="custom-select-wrapper" data-select-id="wage-type">
+                <div class="custom-select">
+                  <div class="custom-select-trigger">Hourly Wage</div>
+                  <div class="custom-options">
+                    <span class="custom-option" data-value="hourly">Hourly Wage</span>
+                    <span class="custom-option" data-value="monthly">Monthly Wage</span>
+                    </div>
+                </div>
+            </div><div class="custom-select-wrapper" data-select-id="currency">
+                <div class="custom-select">
+                  <div class="custom-select-trigger">USD</div>
+                    <div class="custom-options">
+                    <span class="custom-option" data-value="USD">USD</span>
+                    <span class="custom-option" data-value="EUR">EUR</span>
+                    <span class="custom-option" data-value="GBP">GBP</span>
+                    <span class="custom-option" data-value="SEK">SEK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    disable-tap
-    disable-pan
-    camera-controls touch-action="pan-y"
-    orbit-sensitivity="0.3"
-    camera-orbit="40deg 0deg auto"
-    exposure="0.8"
-    >
-    </model-viewer>
-    <p>Här kommer ännu mer exempeltext. En hel väldans massa. Bara för att man ska se att det finns text.
-        Här kommer lite mer text. Oj! Tro det eller ej ännu mer text. Lorem ipsum hah nej mer text igen.
-     </p>
+        <div id="clock">
+            <span id="whole-part">000</span>.<span id="decimal-part">000</span> 
+            <span id="currency-symbol">$</span>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="wage" placeholder="Enter your wage..." oninput="updateWage()">
+        </div>
+
+
+        <div class="buttons">
+            <button id="toggle-button" onclick="toggleClock()">Start</button>
+            <button id="restart-button" hidden="true" onclick="restartClock()">Restart</button>
+        </div>
+
+                
+
+
+    <script src="script.js"></script>
 </body>
 </html>
