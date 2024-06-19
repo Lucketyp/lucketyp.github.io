@@ -81,7 +81,7 @@ function updateWage() {
 }
 
 function updateEarnings() {
-    const wagePerTenthSecond = isHourly ? wage / (3600 * 10) : (wage / 30 / 24 / (3600 * 10)); // Convert monthly wage to seconds
+    const wagePerTenthSecond = isHourly ? wage / (3600 * 10) : (wage / 160 / (3600 * 10)); // Convert monthly wage to seconds counting 160 hours per month
     earnings += wagePerTenthSecond;
     updateEarningsDisplay();
 }
