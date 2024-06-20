@@ -116,10 +116,11 @@ function updateEarningsDisplay() {
 }
 
 function toggleClock() {
-    document.getElementById('restart-button').hidden = false;
+
     if (isRunning) {
         clearInterval(intervalId);
         document.getElementById('toggle-button').textContent = 'Start';
+        document.getElementById('restart-button').hidden = false;
     } else {
         intervalId = setInterval(updateEarnings, 100);
         document.getElementById('toggle-button').textContent = 'Stop';
