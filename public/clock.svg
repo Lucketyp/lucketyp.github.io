@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Transparent background by default (no <rect> or fill) -->
+
+  <!-- Clock Circle -->
+  <circle cx="32" cy="32" r="28" stroke="#cb2727" stroke-width="4" fill="none" />
+
+  <!-- Hour Hand -->
+  <line x1="32" y1="32" x2="42" y2="22" stroke="#cb2727" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Minute Hand -->
+  <line x1="32" y1="32" x2="32" y2="14" stroke="#cb2727" stroke-width="4" stroke-linecap="round" />
+</svg>
